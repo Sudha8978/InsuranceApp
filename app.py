@@ -6,7 +6,7 @@ import pickle
 # Load saved objects
 # -------------------------------
 
-with open("C:\Users\veern\OneDrive\Desktop\AICW\End to end Linear Reg\End to end Linear Reg\poly.pkl", "rb") as f:
+with open("poly.pkl", "rb") as f:
     poly = pickle.load(f)
 
 
