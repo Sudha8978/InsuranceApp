@@ -6,7 +6,7 @@ import pickle
 # Load saved objects
 # -------------------------------
 
-with open("poly.pkl", "rb") as f:
+with open("C:\Users\veern\OneDrive\Desktop\AICW\End to end Linear Reg\End to end Linear Reg\poly.pkl", "rb") as f:
     poly = pickle.load(f)
 
 
@@ -84,3 +84,4 @@ if scaler is not None:
 if st.button("Predict Insurance Cost"):
     prediction = model.predict(input_data)
     st.success(f"Estimated Insurance Cost: ₹ {prediction[0]:,.2f}")
+    
