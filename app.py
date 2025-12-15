@@ -2,11 +2,6 @@ import streamlit as st
 import numpy as np
 import pickle
 
-# 🔴 VERY IMPORTANT IMPORTS (pickle error fix)
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import StandardScaler
-
 
 # -------------------------------
 # Load saved objects
@@ -54,7 +49,6 @@ smoker_yes = 1 if smoker == "Yes" else 0
 region_northwest = 1 if region == "northwest" else 0
 region_southeast = 1 if region == "southeast" else 0
 region_southwest = 1 if region == "southwest" else 0
-# northeast = reference category
 
 
 # -------------------------------
@@ -72,10 +66,8 @@ input_data = np.array([[
     region_southwest
 ]])
 
-# Polynomial features
 input_data = poly.transform(input_data)
 
-# Scaling (if used during training)
 if scaler is not None:
     input_data = scaler.transform(input_data)
 
